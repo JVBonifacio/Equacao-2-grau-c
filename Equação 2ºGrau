@@ -1,0 +1,36 @@
+// Equação 2° Grau
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    //Variáveis
+    int a,b,c, delta, denominador;
+    double raiz,resultadoRaiz, x1, x2;
+    
+    //Definir os numeros
+    printf("a corresponde: ");
+    scanf("%d", &a);
+    printf("b corresponde: ");
+    scanf("%d", &b);
+    printf("c corresponde: ");
+    scanf("%d", &c);
+    
+    //Delta e Raiz
+    delta = (pow(b,2) - (4 * a * c));
+    printf("o delta é : %d\n",delta);
+    
+    resultadoRaiz = delta;
+    raiz = sqrt(resultadoRaiz);
+    printf("A raiz é: %1f",raiz);
+    
+    //Denominador da equação
+    denominador = (2 * a);
+    printf(" e o denominador é: %d\n", denominador);
+    
+    //X na raiz positiva e negativa
+    x1 = (-b + raiz) / denominador;
+    printf("Logo, X1 é: %1f", x1);
+    
+    x2 = (-b - raiz) / denominador;
+    printf(" e X2 é: %1f", x2);
+}
